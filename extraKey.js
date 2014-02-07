@@ -16,9 +16,9 @@ module.exports = function init (sentApp) {
 		})
 	}); 
 	app.get('/keyup/:keyVal', function (req, res) {
-		console.log('request received to send keydown for ', req.params.keyVal);
+		console.log('request received to send keyup for ', req.params.keyVal);
 		
-		cp.exec('nircmd/nircmdc.exe sendkey '+req.params.keyVal + ' up', function () {
+		cp.execFile('nircmd/nircmdc.exe', ['sendkey', req.params.keyVal, 'up'], function () {
 			console.log(arguments);
 			res.send('ok');
 		})
