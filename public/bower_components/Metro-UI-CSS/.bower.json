@@ -1,0 +1,27 @@
+{
+  "name": "Metro-UI-CSS",
+  "version": "2.0.23",
+  "main": [
+    "./css/metro-bootstrap.css",
+    "./css/metro-bootstrap-responsive.css",
+    "./min/metro.min.js",
+    "./fonts/iconFont.eot",
+    "./fonts/iconFont.svg",
+    "./fonts/iconFont.ttf",
+    "./fonts/iconFont.woff"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.9.0"
+  },
+  "homepage": "https://github.com/olton/Metro-UI-CSS",
+  "_release": "2.0.23",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.0.23",
+    "commit": "1c1a92194f137d9cbd36da24b933bd6f82a09f8f"
+  },
+  "_source": "git://github.com/olton/Metro-UI-CSS.git",
+  "_target": "~2.0.23",
+  "_originalSource": "olton/Metro-UI-CSS",
+  "_direct": true
+}

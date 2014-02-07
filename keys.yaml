@@ -1,0 +1,16 @@
+
+- title: Start
+  key: 0x5B
+
+- name: Volume Up
+  key: 0xAF
+  icon: icon-arrow-up
+  size: half
+- title: Mute
+  key: 0xAD
+  icon: icon-volume-mute
+  size: half
+- name: icon-Volume Down
+  key: 0xAE
+  icon: icon-arrow-down
+  size: half

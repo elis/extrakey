@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Extra Keys</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    
+      <link rel="stylesheet" href="/bower_components/Metro-UI-CSS/min/metro-bootstrap.min.css">
+    
+	  <script src="/socket.io/socket.io.js"></script>
+    <script src="/bower_components/jquery/jquery.min.js"></script>
+      <script src="/bower_components/jquery-ui-1.10.4.custom.js"></script>
+      <script src="/bower_components/Metro-UI-CSS/min/metro.min.js"></script>
+    
+     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+    <script src="/bower_components/hammerjs/hammer.js"></script>
+    <script src="/bower_components/jquery-hammerjs/jquery.hammer.js"></script>
+  <script src="/javascripts/extraKey.client.js"></script>
+  </head>
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':6960/livereload.js"></' + 'script>')</script>
+
+  <body class="metro">
+  	<div class="tile-group">
+	  	<? console.log('TESTING\n\n\n', keys, '\n\n\n\nEND TEST'); ?>
+	  	<? for (var i in keys) { ?>
+				<? var classes = []; console.log('keys test:', keys[i]);
+					var key = keys[i];
+					if (key.icon) { classes.push('icon') } 
+					if (key.size) { classes.push(key.size) } 
+					if (key.width) { classes.push(key.width) }
+				?>
+				<a class="tile key <?= classes.join(' ') ?> bg-cyan" data-key="<?= key.key ?>">
+				
+			    <span class="tile-content icon"> 
+		    		<? if (key.icon) { ?>
+			        <i class="<?= key.icon ?>"></i>
+		        <? } ?> 
+			    </span>
+			    <? if (key.title) { ?> 
+				    <span class="tile-status">
+				        <span class="name"><?= key.title ?></span>
+				    </span>
+			    <? } ?>
+				</a>
+	  	<? } ?> 
+	  </div>
+  </body>
+</html>
