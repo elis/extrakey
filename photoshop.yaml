@@ -1,0 +1,83 @@
+
+- title: Start
+  key: "0x5B"
+- name: Volume Up
+  key: 0xAF
+  icon: icon-arrow-up
+  size: half
+- title: Mute
+  key: 0xAD
+  icon: icon-volume-mute
+  size: half
+- name: icon-Volume Down
+  key: 0xAE
+  icon: icon-arrow-down
+  size: half
+
+- type: group
+  title: Basic
+  width: one
+  items:
+  - name: Move tool
+    type: tile
+    width: half
+    color: bg-dark
+    icon: icon-pointer
+    key: v
+    action: press
+  - name: Marquee Tool
+    type: tile
+    width: half
+    color: bg-dark
+    key: "M"
+    icon: icon-checkbox-unchecked
+  - name: Lasso Tool
+    type: tile
+    width: half
+    color: bg-dark
+    key: "L"
+    icon: icon-loading-2
+  - name: Magic Wand
+    type: tile
+    width: half
+    color: bg-dark
+    key: "W"
+    icon: icon-sun
+
+
+  - name: Eyedropper Tool
+    type: tile
+    width: half
+    color: bg-dark
+    key: "I"
+    icon: icon-thermometer
+  - name: Eyedropper Tool
+    type: tile
+    width: half
+    color: bg-dark
+    key: "G"
+    icon: icon-lab
+  - name: Pen Tool
+    type: tile
+    width: half
+    color: bg-dark
+    key: "P"
+    icon: icon-pencil
+  - name: Text Tool
+    type: tile
+    width: half
+    color: bg-dark
+    key: "T"
+    icon: icon-font
+
+- title: Filters
+  type: group
+  width: two
+  items:
+    - title: Gaussian Blur
+      title-background: bg-dark opacity
+      type: tile
+      color: bg-steel
+      width: double
+      background: url(/photoshop/blur.png)
+      key: "ALT+SHIFT+CTRL+H"

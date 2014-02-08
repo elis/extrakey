@@ -38,6 +38,8 @@ ejs.close = '?>';
 yaml = require('js-yaml');
 fs   = require('fs');
 var extraKeys; 
+
+
 app.get('/', function(req, res){
 	// Get document, or throw exception on error
 	try {
@@ -48,6 +50,18 @@ app.get('/', function(req, res){
 	}
 
   res.render('index', { title: 'Express', keys: extraKeys });
+});
+app.get('/tpl/:name/:keysFile?', function(req, res){
+	// Get document, or throw exception on error
+	var file = (req.params.keysFile || 'keys') + '.yaml';
+	try {
+	  extraKeys = yaml.safeLoad(fs.readFileSync(file, 'utf8'));
+	  console.log('Extra keys loaded:', extraKeys);
+	} catch (e) {
+	  console.log(e);
+	}
+
+  res.render(req.params.name, { title: 'Express', keys: extraKeys });
 });
 app.get('/users', user.list);
 
