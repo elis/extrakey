@@ -40,11 +40,25 @@ Once all the dependancies have been successfullt installed, you can run the app 
 You can now navigate to your ExtraKeyboard by visiting your local machine's IP on port 3000.
 
 
-# Adding Key combinations and changing layout
+# Key Combinations and Layout
+
+## Layouts
+
+To modify the layout, check out `views/index.ejs` file, it's a plain HTML with some EJS templating to render the keys.yaml file. Feel free to experiment with it. 
+
+Latest commit contains support for multiple layouts.
+
+You can create additional templates (layouts) and put then in the `views` directory. To access your new template navigate your browser to `/tpl/TEMPLATE_NAME`. i.e. if your template name is `sublime.ejs` than you can access it via `http://localhost:3000/tpl/sublime`.
+
+## Key Combinations
 
 To modify the key combinations open the `keys.yaml` file and simply start adding keys. Each key begins with a dash, and some configurations for the key. Currently the existing support is only for one key push/release at a time, but I'm planning to add complex keyboard (and mouse!) combinations in the near future.
 
-To modify the layout, check out `views/index.ejs` file, it's a plain HTML with some EJS templating to render the keys.yaml file. Feel free to experiment with it. 
+Addtionally to the multiple layouts ExtraKey now supports multiple key configurations.
+
+To use a different key combination create a new `.yaml` file in project root, and navigate your browser to an existing template (like explained above) and append your key configuration name. i.e. if you create a `sublime.yaml` key configuration, you can use it by navigating to your chosen template and appending `sublime` at the end, e.g. `http://localhost:3000/tpl/start/sublime`.
+
+# Misc
 
 Currently the app uses the [Metro UI CSS](http://metroui.org.ua/) for Bootstrap which makes buttons/tiles rather easy to setup.
 
