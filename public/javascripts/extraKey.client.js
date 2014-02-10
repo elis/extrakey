@@ -25,4 +25,6 @@
 			event.preventDefault();
 			return false;
 		}); 
+    
+    $.StartScreen();
 	});

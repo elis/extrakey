@@ -7,8 +7,5 @@
   });
 
   
-  $(function(){
-      $.StartScreen();
-  });
 }());
 
