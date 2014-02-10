@@ -1,47 +1,53 @@
-<? include partials/header ?>
+<? include partials/header-ember ?>
+<body class="metro">
 
-	<body class="metro">
+
+    <script type="text/x-handlebars" data-template-name="main">
+
+    </script>
  <?
- function tileGroup (group) {
- console.log('Tile Group:', group);
-	?><div class="tile-group <?= group.width ?>"><?
-	if (group.title) {
-		?><div class="tile-group-title"><?= group.title ?></div><?
-	}
-	if (group.items && group.items.length > 0) { 
-		for (var i in group.items) {
-			if (group.items[i].type == 'tile') {
-				tileIt(group.items[i]);
-			}
-		}
-	} else {
-			?><h1>Group:</h1> <p>No items in group</p><?
-	}
-	?></div><?
- }
+    function tileGroup (group) {
+        console.log('Tile Group:', group);
+        ?><div class="tile-group <?= group.width ?>"><?
+        if (group.title) {
+            ?><div class="tile-group-title"><?= group.title ?></div><?
+        }
+        if (group.items && group.items.length > 0) { 
+            for (var i in group.items) {
+                if (group.items[i].type == 'tile') {
+                    tileIt(group.items[i]);
+                }
+            }
+        } else {
+            ?><h1>Group:</h1> <p>No items in group</p><?
+        }
+        ?></div><?
+    }
  
- function tileIt (tile) {
-	var classes = [];
-	if (tile.width) { classes.push(tile.width); }
-	if (tile.color) { classes.push(tile.color); }
-	
-	tile.classes = classes.join(' ');
-	?><a href="#" class="tile key <?=tile.classes?>" data-key="<?=tile.key?>" data-click="transform"><?
-	if (tile.icon || tile.background) {
-		if (tile.background) { var style = 'style="background: '+tile.background+';"'; }
-		?><div class="tile-content <?= tile.icon ? 'icon' : '' ?>" <?- style ?>>
-				<? if (tile.icon) { ?><span class="<?=tile.icon?>"></span><? } ?>
-		</div><?
-	}
-	if (tile.title) {
-		?><div class="brand <?= tile['title-background'] ? tile['title-background'] : '' ?>">
-			<span class="text">
-					<?= tile.title ?>
-            </span>
-        </div><?
-	}
-	?></a><?
- }
+    function tileIt (tile) {
+        var classes = [];
+        if (tile.width) { classes.push(tile.width); }
+        if (tile.color) { classes.push(tile.color); }
+
+        tile.classes = classes.join(' ');
+        ?><a href="#" class="tile key <?=tile.classes?>" data-key="<?=tile.key?>" data-click="transform"><?
+        if (tile.icon || tile.background) {
+            if (tile.background) { 
+                var style = 'style="background: '+tile.background+';"'; 
+            }
+            ?><div class="tile-content <?= tile.icon ? 'icon' : '' ?>" <?- style ?>>
+                <? if (tile.icon) { ?><span class="<?=tile.icon?>"></span><? } ?>
+            </div><?
+        }
+        if (tile.title) {
+                ?><div class="brand <?= tile['title-background'] ? tile['title-background'] : '' ?>">
+                <span class="text">
+                    <?= tile.title ?>
+                </span>
+            </div><?
+        }
+        ?></a><?
+    }
  console.log((new Array(40)).join('='));
  console.log(keys);
  console.log((new Array(40)).join('='));

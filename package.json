@@ -10,6 +10,7 @@
     "ejs": "*",
     "js-yaml": "*",
     "express-livereload": "*",
-    "less-middleware": "*"
+    "less-middleware": "*",
+    "socket.io": "~0.9.16"
   }
 }
