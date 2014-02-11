@@ -63,3 +63,7 @@ To use a different key combination create a new `.yaml` file in project root, an
 Currently the app uses the [Metro UI CSS](http://metroui.org.ua/) for Bootstrap which makes buttons/tiles rather easy to setup.
 
 For questions, suggestions, and general inquiry feel free to contact me via email: eli.sklar@gmail.com
+
+Future inspiration: 
+
+- [Physical overlay for iPad Keyboard](http://cdn.cultofmac.com/wp-content/uploads/2012/07/wpid-Photo-12072012-1315.jpg) - this kind of product, which can be easily 3D printed can be a great addition to something like ExtraKey by allowing users to have a tactile keyboard to easily navigate custom keyboards.
